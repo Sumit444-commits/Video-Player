@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="532.0" style="-fx-background-color: Black;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Button fx:id="playBtn" layoutY="316.0" mnemonicParsing="false" onAction="#playMedia" prefHeight="18.0" prefWidth="69.0" text="Play">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="pauseBtn" layoutX="69.0" layoutY="316.0" mnemonicParsing="false" onAction="#pauseMedia" text="Pause">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="previousBtn" layoutX="177.0" layoutY="316.0" mnemonicParsing="false" onAction="#previousVideo" prefHeight="29.0" prefWidth="94.0" text="Previous">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="resetBtn" layoutX="124.0" layoutY="316.0" mnemonicParsing="false" onAction="#resetMedia" text="Reset">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="nextBtn" layoutX="270.0" layoutY="316.0" mnemonicParsing="false" onAction="#nextVideo" text="Next">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Slider fx:id="volumeSlider" layoutX="393.0" layoutY="324.0" prefHeight="14.0" prefWidth="137.0" value="50.0" />
+      <ComboBox fx:id="speedBox" layoutX="318.0" layoutY="316.0" onAction="#changeSpeed" prefHeight="29.0" prefWidth="75.0" promptText="Speed" />
+      <ProgressBar fx:id="progress" layoutY="298.0" prefHeight="18.0" prefWidth="532.0" progress="0.0" />
+      <MediaView fx:id="videoScreen" fitHeight="300.0" fitWidth="532.0" />
+      <Label fx:id="lblPlayer" alignment="CENTER" contentDisplay="TOP" layoutY="348.0" prefHeight="65.0" prefWidth="532.0" text="Video Player" textFill="#efff0a">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Button fx:id="searchBtn" layoutX="468.0" layoutY="414.0" mnemonicParsing="false" onAction="#searchVideo" prefHeight="25.0" prefWidth="63.0" text="Search" />
+      <TextField fx:id="searchBox" layoutX="-1.0" layoutY="414.0" prefHeight="25.0" prefWidth="469.0" promptText="Video Name to sesarch" />
+   </children>
+</AnchorPane>
